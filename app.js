@@ -126,3 +126,79 @@ const maxOfThree = (x,y,z) => Math.max(x,y,z) //learned Math.max w/ google
 */
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+
+const calculateTip = (bill, percent) => bill * (percent * .01)
+
+
+console.log('Exercise 7 Result:', calculateTip(50, 20));
+
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+const convertTemperature = (temp, scale) => {
+    if(scale === 'C'){
+        converted = (temp * 9)/5 +32
+        return converted
+    } else {
+        converted = ((temp -32) * 5)/9
+        return converted
+    }
+}
+
+
+console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+const basicCalculator = (x,y,operation) => {
+    if(operation === 'add'){
+        return x + y;
+    }else if(operation === 'subtract'){
+        return x-y;
+    } else if(operation === 'multiply'){
+        return x*y;
+    }else if(operation === 'divide'){
+        return x/y;
+    } else {
+        return 'invalid operation'
+    }
+}
+
+
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
